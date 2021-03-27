@@ -1,0 +1,36 @@
+apiVersion: "example.delivion.de/v1alpha1"
+kind: "Application"
+metadata:
+  name: "app1"
+  namespace: "default"
+spec:
+  database:
+    enable: False
+    spec: 
+      disksize: "1Gi"
+      clustersize: 1
+      configmap:
+        metadata:
+          name: pgconfig
+        data:
+          POSTGRES_DB: dbDE123
+      secret:
+        metadata:
+          name: pgsecret
+        stringData:
+          POSTGRES_USER: admin
+          POSTGRES_PASSWORD: pwd
+  externalsecret: 
+    url: https://jsontest139.000webhostapp.com/a2.json
+    reload: True
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
