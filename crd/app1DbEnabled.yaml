@@ -11,12 +11,12 @@ spec:
       clustersize: 2
       configmap:
         metadata:
-          name: pgconfig
+          name: pgconfig1
         data:
           POSTGRES_DB: dbDE123
       secret:
         metadata:
-          name: pgsecret
+          name: pgsecret1
         stringData:
           POSTGRES_USER: admin
           POSTGRES_PASSWORD: pwd

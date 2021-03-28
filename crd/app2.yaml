@@ -11,12 +11,12 @@ spec:
       clustersize: 1
       configmap:
         metadata:
-          name: pgconfig
+          name: pgconfig2
         data:
           POSTGRES_DB: dbBusy
       secret:
         metadata:
-          name: pgsecret
+          name: pgsecret2
         stringData:
           POSTGRES_USER: adminbox
           POSTGRES_PASSWORD: pwdbox
