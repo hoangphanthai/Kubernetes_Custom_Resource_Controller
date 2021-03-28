@@ -74,35 +74,38 @@ You will create a controller that adds the additional `Application` layer, but d
 * Adapt your Controller to be able to read the data and convert it either as Secret or as a Configmap to the actual application pod
 
 ## 4. Implementation
+* Re-design CRD yaml  
+ https://github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/blob/main/crd/app1.yaml
+ * Implement Controller logics
 <p align="center">
   <img src="IMPLEMENTATION.png" width="350" title="hover text">
 </p>
 
-## 5. Setup
-### Step 5.1: Clone the project
+## 5. Setup and Start the Controller
+#### Step 5.1: Clone the project
 
 `$ git clone https://github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller.git`
 
-### Step 5.2: Submit the "Application" CRD to Kubernetes  
+#### Step 5.2: Submit the "Application" CRD to Kubernetes  
 `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/crd.yaml`
 
-### Step 5.3: Start the controller
+#### Step 5.3: Start the controller
 `$ cd Kubernetes_Custom_Resource_Controller`  
 `$ go run .`
 
-### Step 5.4: Apply "Application" custom resources and Play around
+#### Step 5.4: Apply "Application" custom resources and Play around
 
-*  Apply and "application" - app1 without database cluster to Kubernetes  
+*  Apply and "application" - **app1** without database cluster to Kubernetes  
 `$ kubectl apply -f https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1.yaml`  
-*  Enable database cluster in app1  
+*  Enable database cluster in **app1**  
 `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1DbEnabled.yaml`  
 *  Play around with "Applications"              
    *   **Update** the app1 specs (changing replicas, application specs, database cluster size...) and re-apply  
-   *   **Add** another "application" - app2:  
+   *   **Add** another "application" - **app2**:  
 	      `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app2.yaml`  
    *   **List** the applications
           `$ kubectl get application`  
-   *   **Delete** app1  
+   *   **Delete** **app1**  
           `$ kubectl delete application app1`
    
    ..... more logics defined in the above step **4. Implementation**        
