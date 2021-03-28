@@ -31,15 +31,15 @@ As a user, I want to be able to create a resource looking more or less like foll
 
 If I create such a resource and submit it to Kubernetes, the controller should ensure that the appropriate Kubernetes resources get created.
 
-1. It should create a `Deployment` based on the template spec and number of replicas (details in Step 1 below).
-2. In case `database` is set to true, create resources for a PostgreSQL database and inject the secrets as environment variables in the application (details  in Step 2 below).
-3. In case the `externalsecret` is specified, read it and convert it to a normal k8s secret, and inject it into the application (details in Step 3 below).
+1. It should create a **Deployment** based on the template spec and number of replicas (details in Step 1 below).
+2. In case **database** is set to true, create resources for a PostgreSQL database and inject the secrets as environment variables in the application (details  in Step 2 below).
+3. In case the **externalsecret** is specified, read it and convert it to a normal k8s secret, and inject it into the application (details in Step 3 below).
 
 Now that we have the overall goal, let's go through in more details:
 
-### Step 0 - Get to know Kubernetes Go API
+### Step 3.1. - Get to know Kubernetes Go API
 
-### Step 1 - Create basic (proxy like) Application Controller
+### Step 3.2. - Create basic (proxy like) Application Controller
 
 At this step, just consider the Application definition above, but without the `database` and `externalsecret`.
 You will create a controller that adds the additional `Application` layer, but doesn't add any additional functionality. What it will do, however, is:
@@ -51,7 +51,7 @@ You will create a controller that adds the additional `Application` layer, but d
 * When users modify the `Deployment` (but not the `Application`), the changes are rolled back (i.e, it is kept in sync with the `Application`)
 * When users `kubectl describe` the Application, it shows the status of the Deployment
 
-### Step 2 - Add support for Database
+### Step 3.3. - Add support for Database
 
 * Deploy a Postgres cluster on Kubernetes when users enable and disable by setting database = True/False correspondingly
   * Disk size
@@ -60,7 +60,7 @@ You will create a controller that adds the additional `Application` layer, but d
 * Implement the defined logics above
 * Setup the application pod (managed by the `Application` CR) to connect to the Postgres cluster
 
-### Step 3 - Add support for external secrets
+### Step 3.4. - Add support for external secrets
 
 * Deploy a (web) application to Kubernetes. It should:
   * Expose content like JSON/YAML via a port (Recommendation 8080)
