@@ -89,13 +89,13 @@ You will create a controller that adds the additional `Application` layer, but d
 #### Step 5.2: Submit the "Application" CRD to Kubernetes  
 `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/crd.yaml`
 
-#### Step 5.3: Start the controller
+#### Step 5.3: Start the Controller
 `$ cd Kubernetes_Custom_Resource_Controller`  
 `$ go run .`
 
 #### Step 5.4: Apply "Application" custom resources and Play around
 
-*  Apply and "application" - **app1** without database cluster to Kubernetes  
+*  Apply an "application" - **app1** without database cluster to Kubernetes  
 `$ kubectl apply -f https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1.yaml`  
 *  Enable database cluster in **app1**  
 `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1DbEnabled.yaml`  
