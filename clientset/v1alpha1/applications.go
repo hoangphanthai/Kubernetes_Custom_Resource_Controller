@@ -3,7 +3,7 @@ package clientV1alpha1
 import (
 	"context"
 
-	"appscontroller/api/types/v1alpha1"
+	"github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/api/types/v1alpha1"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"
@@ -55,7 +55,6 @@ func (c *applicationClient) Get(name string, opts metav1.GetOptions) (*v1alpha1.
 	return &result, err
 }
 
-// Update takes the representation of a application and updates it. Returns the server's representation of the application, and an error, if there is any.
 func (c *applicationClient) Update(application *v1alpha1.Application, opts metav1.UpdateOptions) (result *v1alpha1.Application, err error) {
 	result = &v1alpha1.Application{}
 	err = c.restClient.Put().

@@ -1,4 +1,4 @@
-module appscontroller
+module github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller
 
 go 1.15
 

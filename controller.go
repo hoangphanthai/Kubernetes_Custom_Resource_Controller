@@ -1,13 +1,14 @@
 package main
 
 import (
-	"appscontroller/api/types/v1alpha1"
 	"context"
 	"fmt"
 	"reflect"
 	"time"
 
-	clientV1alpha1 "appscontroller/clientset/v1alpha1"
+	"github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/api/types/v1alpha1"
+
+	clientV1alpha1 "github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/clientset/v1alpha1"
 
 	apiv1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -41,14 +42,15 @@ func watchResources() {
 		fmt.Printf("There currently %d application(s) in [%s] namespace \n", len(preList.Items), workingNspace)
 
 		for {
+
 			/* 	applicationsFromStore := store.List()
 			fmt.Printf("application in store: %d\n", len(applicationsFromStore))
 			*/
-			//fmt.Print("new loop ")
+
 			var ad, de, co *v1alpha1.ApplicationList
 			curList, err := applicationsClient.List(metav1.ListOptions{})
 			if err != nil {
-				// Incase connection lost. e.g. connecting/disconnecting VPN or network down
+				// In case connection is lost. e.g. connecting/disconnecting VPN or network down
 				showMessage(err.Error())
 				curList = preList
 			} else {
@@ -115,7 +117,8 @@ func watchResources() {
 					}
 				}
 
-				// Up to here after 2-second loop, there should be no change in applications list - means curList.Names == preList.Names or preList.Names is nil (just created for 1st time)
+				// Up to here after 2-second loop, there should be no change in applications list
+				// This means curList.Names == preList.Names or preList.Names is nil (just created for 1st time)
 				if co != nil && len(co.Items) != 0 {
 
 					for _, curApp := range co.Items {
@@ -140,7 +143,9 @@ func watchResources() {
 								configMapChanged := !reflect.DeepEqual(curApp.Spec.Database.Spec.Configmap, preApp.Spec.Database.Spec.Configmap)
 								secretChanged := !reflect.DeepEqual(curApp.Spec.Database.Spec.Secret, preApp.Spec.Database.Spec.Secret)
 
-								// Check for the previous versions of Configmap and Secret, it exists then they are considered valid (but maybe not containing key "POSTGRES_PASSWORD")
+								// Check for the previous versions of Configmap and Secret, it exists then they are considered valid
+								// (but maybe not containing key "POSTGRES_PASSWORD")
+
 								_, errCfg := configMapsClient.Get(context.TODO(), curApp.Spec.Database.Spec.Configmap.Name, metav1.GetOptions{})
 								configmapExists := (errCfg == nil)
 								_, errSc := secretsClient.Get(context.TODO(), curApp.Spec.Database.Spec.Secret.Name, metav1.GetOptions{})

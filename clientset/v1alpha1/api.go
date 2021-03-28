@@ -2,7 +2,7 @@
 package clientV1alpha1
 
 import (
-	"appscontroller/api/types/v1alpha1"
+	"github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/api/types/v1alpha1"
 
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/kubernetes/scheme"

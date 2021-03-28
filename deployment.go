@@ -1,7 +1,6 @@
 package main
 
 import (
-	"appscontroller/api/types/v1alpha1"
 	"context"
 	"crypto/tls"
 	"encoding/json"
@@ -9,6 +8,8 @@ import (
 	"io/ioutil"
 	"net/http"
 	"time"
+
+	"github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/api/types/v1alpha1"
 
 	appsv1 "k8s.io/api/apps/v1"
 	apiv1 "k8s.io/api/core/v1"

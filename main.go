@@ -16,8 +16,8 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/util/homedir"
 
-	"appscontroller/api/types/v1alpha1"
-	clientV1alpha1 "appscontroller/clientset/v1alpha1"
+	"github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/api/types/v1alpha1"
+	clientV1alpha1 "github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/clientset/v1alpha1"
 )
 
 var kubeconfig *string
@@ -60,7 +60,7 @@ func main() {
 func initClient() {
 	var err error
 
-	// test the in-cluster config
+	// Test the in-cluster config
 	_, err = rest.InClusterConfig()
 	if err != nil {
 		// if not running on K8s

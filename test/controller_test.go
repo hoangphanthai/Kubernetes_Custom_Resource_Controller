@@ -1,11 +1,12 @@
 package test
 
 import (
-	"appscontroller/api/types/v1alpha1"
 	"fmt"
 	"io/ioutil"
 	"reflect"
 	"testing"
+
+	"github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/api/types/v1alpha1"
 
 	"gopkg.in/yaml.v3"
 	apiv1 "k8s.io/api/core/v1"
