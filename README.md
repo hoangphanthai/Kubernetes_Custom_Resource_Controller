@@ -103,9 +103,9 @@ You will create a controller that adds the additional `Application` layer, but d
    *   **Update** the app1 specs (changing replicas, application specs, database cluster size...) and re-apply  
    *   **Add** another "application" - **app2**:  
 	      `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app2.yaml`  
-   *   **List** the applications
+   *   **List** the applications  
           `$ kubectl get application`  
-   *   **Delete** **app1**  
+   *   **Delete** application **app1**  
           `$ kubectl delete application app1`
    
    ..... more logics defined in the above step **4. Implementation**        
