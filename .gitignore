@@ -11,5 +11,16 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+bin
+pkg
+.vscode
+src/k8s.io
+.DS_Store
+src/appscontroller/.bash_profile
+src/appscontroller/.bashrc
+src/appscontroller/.profile
+src/appscontroller/.zshrc
+src/appscontroller/temp
+
 # Dependency directories (remove the comment below to include it)
 # vendor/

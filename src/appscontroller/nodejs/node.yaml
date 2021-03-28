@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-deployment
+  labels:
+    app: nodejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      containers:
+      - image: thaihoang/nodeone
+        imagePullPolicy: IfNotPresent
+        name: nodejs
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: "1"          

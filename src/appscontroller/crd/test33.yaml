@@ -1,0 +1,17 @@
+apiVersion: "example.delivion.de/v1alpha1"
+kind: "Application"
+metadata:
+  name: "test3"
+  namespace: "default"
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        imagePullPolicy: IfNotPresent
+        ports:
+         - containerPort: 80
