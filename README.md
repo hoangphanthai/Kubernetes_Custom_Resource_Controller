@@ -96,14 +96,14 @@ You will create a controller that adds the additional `Application` layer, but d
 #### Step 5.4: Apply "Application" custom resources and Play around
 *  Start new terminal window (tab) to watch the changes in Kubernetes cluster  
    `$ watch -n 1 kubectl get all -o wide`
-*  Start new terminal window  
+*  Start new terminal window (tab)
    *  Apply an "application" - **app1** without database cluster to Kubernetes  
    `$ kubectl apply -f https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1.yaml`  
-   *  Enable database cluster in **app1**  
+   *  Enable PostgreSQL cluster in **app1**  
    `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1DbEnabled.yaml`  
 
-   *  Play around with "Applications"              
-      *   **Update** the app1 specs (changing replicas, application specs, database cluster size...) and re-apply       
+   *  Play around with "Applications"  
+      *   **Update** the **app1** specs (changing replicas, application specs, database cluster size...) and re-apply  
       *   **Add** another "application" - **app2**:  
 	    `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app2.yaml`  
       *   **List** the applications  
