@@ -94,7 +94,7 @@ You will create a controller that adds the additional `Application` layer, but d
 `$ go run .`
 
 #### Step 5.4: Apply "Application" custom resources and Play around
-
+*  Start new terminal window  
 *  Apply an "application" - **app1** without database cluster to Kubernetes  
 `$ kubectl apply -f https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1.yaml`  
 *  Enable database cluster in **app1**  
