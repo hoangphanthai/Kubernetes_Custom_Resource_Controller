@@ -5,7 +5,7 @@ metadata:
   namespace: "default"
 spec:
   database:
-    enable: False
+    enable: True
     spec: 
       disksize: "1Gi"
       clustersize: 2
