@@ -94,19 +94,22 @@ You will create a controller that adds the additional `Application` layer, but d
 `$ go run .`
 
 #### Step 5.4: Apply "Application" custom resources and Play around
+*  Start new terminal window (tab) to watch the changes in Kubernetes cluster  
+   `$ watch -n 1 kubectl get all -o wide`
 *  Start new terminal window  
-*  Apply an "application" - **app1** without database cluster to Kubernetes  
-`$ kubectl apply -f https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1.yaml`  
-*  Enable database cluster in **app1**  
-`$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1DbEnabled.yaml`  
-*  Play around with "Applications"              
-   *   **Update** the app1 specs (changing replicas, application specs, database cluster size...) and re-apply  
-   *   **Add** another "application" - **app2**:  
-	      `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app2.yaml`  
-   *   **List** the applications  
-          `$ kubectl get application`  
-   *   **Delete** application **app1**  
-          `$ kubectl delete application app1`
+   *  Apply an "application" - **app1** without database cluster to Kubernetes  
+   `$ kubectl apply -f https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1.yaml`  
+   *  Enable database cluster in **app1**  
+   `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app1DbEnabled.yaml`  
+
+   *  Play around with "Applications"              
+      *   **Update** the app1 specs (changing replicas, application specs, database cluster size...) and re-apply       
+      *   **Add** another "application" - **app2**:  
+	    `$ kubectl apply  -f  https://raw.githubusercontent.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/main/crd/app2.yaml`  
+      *   **List** the applications  
+             `$ kubectl get application`  
+      *   **Delete** application **app1**  
+             `$ kubectl delete application app1`
    
    ..... more logics defined in the above step **4. Implementation**        
 ## 6. Current work
