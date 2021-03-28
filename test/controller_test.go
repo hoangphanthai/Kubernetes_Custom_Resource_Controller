@@ -1,7 +1,7 @@
 package test
 
 import (
-	"appscontroller/src/appscontroller/api/types/v1alpha1"
+	"appscontroller/api/types/v1alpha1"
 	"fmt"
 	"io/ioutil"
 	"reflect"

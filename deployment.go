@@ -1,7 +1,7 @@
 package main
 
 import (
-	"appscontroller/src/appscontroller/api/types/v1alpha1"
+	"appscontroller/api/types/v1alpha1"
 	"context"
 	"crypto/tls"
 	"encoding/json"

@@ -3,7 +3,7 @@ package clientV1alpha1
 import (
 	"context"
 
-	"appscontroller/src/appscontroller/api/types/v1alpha1"
+	"appscontroller/api/types/v1alpha1"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"

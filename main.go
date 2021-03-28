@@ -16,8 +16,8 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/util/homedir"
 
-	"appscontroller/src/appscontroller/api/types/v1alpha1"
-	clientV1alpha1 "appscontroller/src/appscontroller/clientset/v1alpha1"
+	"appscontroller/api/types/v1alpha1"
+	clientV1alpha1 "appscontroller/clientset/v1alpha1"
 )
 
 var kubeconfig *string

@@ -1,13 +1,13 @@
 package main
 
 import (
-	"appscontroller/src/appscontroller/api/types/v1alpha1"
+	"appscontroller/api/types/v1alpha1"
 	"context"
 	"fmt"
 	"reflect"
 	"time"
 
-	clientV1alpha1 "appscontroller/src/appscontroller/clientset/v1alpha1"
+	clientV1alpha1 "appscontroller/clientset/v1alpha1"
 
 	apiv1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
