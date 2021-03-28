@@ -31,7 +31,7 @@ As a user, I want to be able to create a resource looking more or less like foll
 
 If I create such a resource and submit it to Kubernetes, the controller should ensure that the appropriate Kubernetes resources get created.
 
-1. It should create a **Deployment** based on the template spec and number of replicas (details in Step 1 below).
+1. It should create a **deployment** based on the template spec and number of replicas (details in Step 1 below).
 2. In case **database** is set to true, create resources for a PostgreSQL database and inject the secrets as environment variables in the application (details  in Step 2 below).
 3. In case the **externalsecret** is specified, read it and convert it to a normal k8s secret, and inject it into the application (details in Step 3 below).
 
@@ -60,7 +60,7 @@ You will create a controller that adds the additional `Application` layer, but d
 * Implement the defined logics above
 * Setup the application pod (managed by the `Application` CR) to connect to the Postgres cluster
 
-### Task 3.4. Add support for external secrets
+### Task 3.4. Add support for external Secrets
 
 * Deploy a (web) application to Kubernetes. It should:
   * Expose content like JSON/YAML via a port (Recommendation 8080)
@@ -70,7 +70,7 @@ You will create a controller that adds the additional `Application` layer, but d
   * Type (E.g. JSON/YAML) - Please focus on the type that you exposed via step 3.1
   * URL - URL to the secret (e.g. <https://delivion-secrets/test.json>)
 
-* Again, define the logic(s) of this implementation
+* Again, define the logic(s) for these requirements
 * Adapt your Controller to be able to read the data and convert it either as Secret or as a Configmap to the actual application pod
 
 ## 4. Implementation
