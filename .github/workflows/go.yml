@@ -31,7 +31,7 @@ jobs:
     - name: build-and-push
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: thaihoang/appscontroller
+        image: hoangphanthai/appscontroller
         registry: docker.io
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
