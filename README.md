@@ -1,6 +1,6 @@
 # Kubernetes "Application" Custom Resource Controller
 ## 1. Introduction
-This project was proposed as an assignment to Thai Hoang (HoangBamberg@Gmail.Com) during his 6-week internship at Delivion GmbH (www.delivion.de). 
+This project was proposed as an assignment to me (Thai Hoang <HoangBamberg@Gmail.Com>) during my 6-week internship at Delivion GmbH (www.delivion.de) 
 
 ## 2. Acknowledgement
 The project was developed after studying the article from Martin Helmich (https://www.martin-helmich.de/en/blog/kubernetes-crd-client.html). The project skeleton was originally adapted from his code templates.
@@ -73,7 +73,7 @@ You will create a controller that adds the additional `Application` layer, but d
 * Again, define the logic(s) for these requirements
 * Adapt your Controller to be able to read the data and convert it either as Secret or as a Configmap to the actual application pod
 
-## 4. Implementation
+## 4. Implementation by me
 * Re-design CRD yaml  
  https://github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/blob/main/crd/app1.yaml
  * Implement Controller logics
