@@ -3,7 +3,7 @@
 This project was proposed as an assignment to Thai Hoang (HoangBamberg@Gmail.Com) during his 6-week internship at Delivion GmbH (www.delivion.de). 
 
 ## 2. Acknowledgement
-The project was developed after studying the post from Martin Helmich (https://www.martin-helmich.de/en/blog/kubernetes-crd-client.html). The project skeleton was originally adapted from his code templates.
+The project was developed after studying the article from Martin Helmich (https://www.martin-helmich.de/en/blog/kubernetes-crd-client.html). The project skeleton was originally adapted from his code templates.
 
 ## 3. Task description
 ### Overall goal
