@@ -109,3 +109,5 @@ You will create a controller that adds the additional `Application` layer, but d
           `$ kubectl delete application app1`
    
    ..... more logics defined in the above step **4. Implementation**        
+## 6. Current work
+*  Enabling in-cluster running  
