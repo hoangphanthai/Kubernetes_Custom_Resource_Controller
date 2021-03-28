@@ -1,6 +1,6 @@
 # Kubernetes "Application" Custom Resource Controller
 ## 1. Introduction
-This project was proposed as an assignment to Thai Hoang (HoangBamberg@Gmail.Com) during his 6-week internship at Delivion GmbH (www.delivion.de). Delivion plans, develops and operates multi-cloud platforms for customers in Digital Entertainment, Financial companies and Insurance providers. 
+This project was proposed as an assignment to Thai Hoang (HoangBamberg@Gmail.Com) during his 6-week internship at Delivion GmbH (www.delivion.de). 
 
 ## 2. Acknowledgement
 The project was developed after studying the post from Martin Helmich (https://www.martin-helmich.de/en/blog/kubernetes-crd-client.html). The project skeleton was originally adapted from his code templates.
