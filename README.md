@@ -75,12 +75,15 @@ You will create a controller that adds the additional `Application` layer, but d
 
 ## 4. Implementation by me
 * Re-design CRD yaml  
- https://github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/blob/main/crd/app1.yaml
- * Implement Controller logics
+https://github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/blob/main/crd/app1.yaml
+* Implement Controller logics
 <p align="center">
   <img src="IMPLEMENTATION.png" width="350" title="hover text">
-</p>
+</p>  
 
+* Unit Testing  
+* Automated Gitlab Continuous Integration
+ 
 ## 5. Setup and Start the Controller
 #### Step 5.1: Clone the project
 
@@ -114,3 +117,4 @@ You will create a controller that adds the additional `Application` layer, but d
    ..... more logics defined in the above step **4. Implementation**        
 ## 6. Current work
 *  Enabling in-cluster running  
+*  Continuous Deployment
