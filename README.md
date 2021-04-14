@@ -1,9 +1,9 @@
 # Kubernetes "Application" Custom Resource Controller
 ## 1. Introduction
-This project was proposed as an assignment to me (Thai Hoang <HoangBamberg@Gmail.Com>) during my 6-week internship at Delivion GmbH (www.delivion.de) 
+This project was proposed as an assignment to me during my 6-week internship at [Delivion GmbH](www.delivion.de). The source code is published under agreement with Delivion.   
 
 ## 2. Acknowledgement
-The project was developed after studying the article from Martin Helmich (https://www.martin-helmich.de/en/blog/kubernetes-crd-client.html). The project skeleton was originally adapted from his code templates.
+The project was developed after studying the [article from Martin Helmich](https://www.martin-helmich.de/en/blog/kubernetes-crd-client.html). The project skeleton was originally adapted from his code templates.
 
 ## 3. Task description
 ### Overall goal
@@ -67,13 +67,13 @@ You will create a controller that adds the additional `Application` layer, but d
   * Be reachable from outside of the cluster & secured via TLS (VPN is enough)
 
 * Add external Secret/Value support in the `Application` CRD:
-  * Type (E.g. JSON/YAML) - Please focus on the type that you exposed via step 3.1
+  * Type (E.g. JSON/YAML) - Please focus on the type that you exposed via above step
   * URL - URL to the secret (e.g. <https://delivion-secrets/test.json>)
 
 * Again, define the logic(s) for these requirements
 * Adapt your Controller to be able to read the data and convert it either as Secret or as a Configmap to the actual application pod
 
-## 4. Implementation by me
+## 4. Implementation
 * Re-design CRD yaml  
 https://github.com/hoangphanthai/Kubernetes_Custom_Resource_Controller/blob/main/crd/app1.yaml
 * Implement Controller logics
