@@ -1,6 +1,6 @@
 # Kubernetes "Application" Custom Resource Controller
 ## 1. Introduction
-This project was proposed as an assignment to me during my 6-week internship at [Delivion GmbH](www.delivion.de). The source code is published under agreement with Delivion.   
+This project was proposed as an assignment to me during my 6-week internship at [Delivion GmbH](https://www.delivion.de/). The source code is published under agreement with Delivion.   
 
 ## 2. Acknowledgement
 The project was developed after studying the [article from Martin Helmich](https://www.martin-helmich.de/en/blog/kubernetes-crd-client.html). The project skeleton was originally adapted from his code templates.
